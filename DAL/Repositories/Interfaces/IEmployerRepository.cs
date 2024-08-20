@@ -6,8 +6,8 @@ public interface IEmployerRepository<T>
     where T : BaseModel
 {
     public Task<T> Get(int id);
-    public Task<T> Delete(int id);
-    public Task<T> Update(T entity);
+    public Task Remove(int id);
+    public Task Update(T entity);
     public Task<IEnumerable<T>> GetAll();
-    public Task Create(T entity);
+    public Task Add(T entity);
 }

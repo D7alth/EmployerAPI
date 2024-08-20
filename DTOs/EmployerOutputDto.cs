@@ -2,7 +2,7 @@ using employer_api.Models.Enums;
 
 namespace employer_api.DTOs;
 
-public class CreateEmployerDto
+public class EmployerOutputDto
 {
     public string FirstName { get; set; } = null!;
     public string LastName { get; set; } = null!;

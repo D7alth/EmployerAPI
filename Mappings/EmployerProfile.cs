@@ -8,7 +8,7 @@ public class EmployerProfile : Profile
 {
     public EmployerProfile()
     {
-        CreateMap<CreateEmployerDto, Employer>();
-        CreateMap<Employer, CreateEmployerDto>();
+        CreateMap<EmployerInputDto, Employer>();
+        CreateMap<Employer, EmployerOutputDto>();
     }
 }

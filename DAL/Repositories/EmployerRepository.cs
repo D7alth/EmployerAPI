@@ -19,14 +19,31 @@ public class EmployerRepository(ApplicationDbContext context) : IEmployerReposit
         }
     }
 
-    public Task<Employer> Delete(int id)
+    public async Task Remove(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var employer = context.Employers.FirstOrDefault(em => em.Id == id) ?? null!;
+            context.Employers.Remove(employer);
+            await context.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
     }
 
-    public Task<Employer> Update(Employer entity)
+    public async Task Update(Employer entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+            context.Update(entity);
+            await context.SaveChangesAsync();
+        }
+        catch (Exception e)
+        {
+            throw new Exception(e.Message);
+        }
     }
 
     public async Task<IEnumerable<Employer>> GetAll()
@@ -41,7 +58,7 @@ public class EmployerRepository(ApplicationDbContext context) : IEmployerReposit
         }
     }
 
-    public async Task Create(Employer entity)
+    public async Task Add(Employer entity)
     {
         try
         {
