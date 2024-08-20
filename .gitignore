@@ -8,6 +8,9 @@
 *.userosscache
 *.sln.docstates
 
+appsettings.json
+crud_mssql.generated.sln
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
