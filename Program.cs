@@ -1,4 +1,4 @@
-using employer_api.DataContext;
+using employer_api.DAL.DataContext;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,7 +1,7 @@
 using employer_api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace employer_api.DataContext;
+namespace employer_api.DAL.DataContext;
 
 public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
